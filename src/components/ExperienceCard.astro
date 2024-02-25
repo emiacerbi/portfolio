@@ -1,0 +1,22 @@
+---
+interface Props {
+  company: string;
+  href?: string;
+  time: string;
+  position: string;
+  caption: string;
+}
+
+const { company, href, time, position, caption } = Astro.props;
+---
+
+<li class="relative grid grid-cols-2 max-w-prose">
+  <div
+    class="absolute top-[8px] -left-[26px] w-3 h-3 border-violet-400 border-2 rounded-full bg-violet-300"
+  >
+  </div>
+  <h3 class="text-lg text-accent font-semibold">{company}</h3>
+  <p class="text-sm justify-self-end self-center text-neutral-400">{time}</p>
+  <p class="font-medium text-neutral-300">{position}</p>
+  <p class="text-sm col-start-1 col-span-2 mt-2">{caption}</p>
+</li>

@@ -1,0 +1,87 @@
+---
+const projects = [
+  {
+    title: 'Loopstudios',
+    caption: 'Landing page about virtual reality projects',
+    tags: ['Typescript', 'Next.js', 'Tailwind'],
+    href: 'https://loopstudios-emiacerbi.vercel.app/',
+  },
+  {
+    title: 'Aerolab',
+    caption: 'E-commerce challenge project for a company',
+    tags: ['Typescript', 'Next.js', 'Tailwind'],
+    href: 'https://emiacerbi-aerolab-challenge.vercel.app/',
+  },
+  {
+    title: 'Typeblitz',
+    caption: 'Typeracing game',
+    tags: ['Typescript', 'Next.js', 'Tailwind'],
+    href: 'https://typeblitz.vercel.app/',
+  },
+  {
+    title: 'Url Shortener',
+    caption: 'App where you can submit a link and it will be shortened.',
+    tags: ['Typescript', 'Next.js', 'Tailwind', 'Prisma', 'PostgreSQL'],
+    href: 'https://url-shortener-five-eta.vercel.app/',
+  },
+  {
+    title: 'Shoes Shop',
+    caption: 'E-commerce site to buy and sell sportswear.',
+    tags: ['Javascript', 'Next.js', 'Tailwind'],
+    href: 'https://shoes-shop-main.vercel.app/',
+  },
+  {
+    title: 'Job Listing',
+    caption: 'App where you can filter jobs based on different inputs',
+    tags: ['Typescript', 'Vite', 'Tailwind', 'React'],
+    href: 'https://job-listing-indol.vercel.app/',
+  },
+  {
+    title: 'Advice Generator',
+    caption: 'App that gives your random advice.',
+    tags: ['Typescript', 'Vite', 'React', 'Tailwind'],
+    href: 'https://advice-generator-liard.vercel.app/',
+  },
+  {
+    title: 'Calculator',
+    caption: 'Just a simple calculator.',
+    tags: ['Javascript', 'CSS'],
+    href: 'https://solvd-calculator.vercel.app/',
+  },
+  {
+    title: 'Insure',
+    caption: 'Insurance company website.',
+    tags: ['Typescript', 'Next.js', 'SCSS'],
+    href: 'https://insure-landing-page-emiacerbi.vercel.app/',
+  },
+];
+---
+
+<section class="pb-12 scroll-m-20" id="projects">
+  <h2 class="font-bold text-3xl relative w-fit">
+    Projects
+    <div class="w-full absolute bg-accent h-1 -bottom-1"></div>
+  </h2>
+
+  <div class="grid grid-cols-3 gap-4 mt-6">
+    {
+      projects.map((project) => (
+        <article class="h-40 flex flex-col border border-neutral-700 rounded-lg p-2">
+          <h3 class="text-accent font-bold hover:underline">
+            <a target="_blank" href={project.href}>
+              {project.title}
+            </a>
+          </h3>
+          <p class="text-sm mt-1">{project.caption}</p>
+          <p class="flex flex-wrap gap-2 mt-auto">
+            {project.tags.map((tag) => (
+              <span class="p-1 font-semibold rounded-sm text-[10px] border-neutral-700 border  ">
+                {tag}
+              </span>
+            ))}
+          </p>
+        </article>
+      ))
+    }
+  </div>
+</section>

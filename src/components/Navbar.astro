@@ -1,0 +1,46 @@
+---
+const listItems = [
+  {
+    label: 'Experience',
+    href: '#experience',
+  },
+  {
+    label: 'Projects',
+    href: '#projects',
+  },
+  {
+    label: 'About',
+    href: '#about',
+  },
+];
+---
+
+<navbar class="flex justify-center py-4">
+  <ul class="flex flex-wrap justify-center gap-8">
+    {
+      listItems.map((listItem) => (
+        <li class="hover-animation relative cursor-pointer">
+          <a href={listItem.href}>{listItem.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+</navbar>
+
+<style>
+  .hover-animation::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.33s ease;
+    background-color: white;
+  }
+
+  .hover-animation:hover::after {
+    width: 50%;
+  }
+</style>

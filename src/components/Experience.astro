@@ -1,0 +1,37 @@
+---
+import ExperienceCard from '../components/ExperienceCard.astro';
+---
+
+<section class="scroll-m-20" id="experience">
+  <h2 class="font-bold text-3xl relative w-fit">
+    Experience
+    <div class="w-full absolute bg-accent h-1 -bottom-1"></div>
+  </h2>
+
+  <ul class="flex flex-col gap-8 mt-8 relative ml-8">
+    <div class="absolute left-[-20.5px] top-2 w-[1px] h-full bg-neutral-700">
+    </div>
+    <ExperienceCard
+      company="Solvd"
+      time="June 2022 - Present"
+      caption=`
+        Creating user interfaces and experiences for websites and web
+        applications. Responsible for optimizing the user experience, ensuring
+        cross-browser compatibility, and enhancing the overall performance of
+        web applications. Technologies: React, Typescript, MUI, Next.Js, amongst
+        many more.
+      `
+      position="Frontend Developer"
+    />
+    <ExperienceCard
+      company="Independent"
+      time="May 2021 - Present"
+      caption=`
+        Collaborating closely with clients to understand their unique needs and
+        vision. Whether it's translating designs into code or optimizing
+        existing interfaces for performance and usability. 
+      `
+      position="Frontend Developer"
+    />
+  </ul>
+</section>

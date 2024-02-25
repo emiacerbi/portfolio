@@ -1,0 +1,31 @@
+---
+import LinkedIn from '../components/Icons/Linkedin.astro';
+import Gmail from '../components/Icons/Gmail.astro';
+import Github from '../components/Icons/Github.astro';
+import Link from '../components/Link.astro';
+---
+
+<main class="max-w-prose flex flex-col gap-6">
+  <h1 class="font-bold text-5xl">
+    Hi, I'm <strong class="text-accent">Emi</strong>
+  </h1>
+  <p class="text-lg">
+    Software developer with
+    <strong class="text-accent">years of experience</strong> developing web applications,
+    focused on building unique products that look good and deliver performance.
+  </p>
+  <div class="flex gap-4 flex-wrap font-semibold">
+    <Link target="about_blank" href="https://linkedin.com/in/emiliano-acerbi">
+      <LinkedIn />
+      LinkedIn
+    </Link>
+    <Link target="about_blank" href="mailto:eacerbip@gmail.com">
+      <Gmail />
+      Gmail
+    </Link>
+    <Link target="about_blank" href="https://github.com/emiacerbi">
+      <Github />
+      Github
+    </Link>
+  </div>
+</main>
