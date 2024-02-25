@@ -1,0 +1,46 @@
+<script>
+  interface Star {
+    x: number;
+    y: number;
+    z: number;
+  }
+
+  const canvas = document.getElementById('starfield') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d')!;
+  const numStars = 250;
+  const stars: Star[] = [];
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  for (let i = 0; i < numStars; i++) {
+    const x = Math.random() * canvas.width - canvas.width / 2;
+    const y = Math.random() * canvas.height - canvas.height / 2;
+    const z = Math.random() * canvas.width;
+    stars.push({ x, y, z });
+  }
+
+  function render() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars.forEach((star) => {
+      const x = (star.x * canvas.width) / star.z + canvas.width / 2;
+      const y = (star.y * canvas.height) / star.z + canvas.height / 2;
+      const radius = Math.max(0.1, (1 - star.z / canvas.width) * 1.5);
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, 2 * Math.PI);
+      ctx.fillStyle = 'white';
+      ctx.fill();
+      star.z -= 2;
+
+      if (star.z <= 0) {
+        star.z = canvas.width;
+      }
+    });
+
+    requestAnimationFrame(render);
+  }
+
+  render();
+</script>
+
+<canvas id="starfield" class="pointer-events-none fixed w-full h-full"></canvas>
