@@ -6,7 +6,14 @@ export default {
 			colors: {
 				main: '#e5e5e5',
 				accent: '#a78bfa'
-			} 
+			}, 
+			screens: {
+				'xs': '480px',
+				'sm': '768px',
+				'lg': '1024px',
+				'xl': '1280px',
+				'2xl': '1536px',
+			  }
 		},
 	},
 	plugins: [],
