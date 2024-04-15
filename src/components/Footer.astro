@@ -1,0 +1,27 @@
+---
+import Github from './Icons/Github.astro';
+import Gmail from './Icons/Gmail.astro';
+import Linkedin from './Icons/Linkedin.astro';
+import Link from './Link.astro';
+import Arrow from './Icons/Arrow.astro';
+---
+
+<div
+  class="flex gap-4 flex-wrap justify-center items-center font-semibold pb-12"
+>
+  <Link target="about_blank" href="https://linkedin.com/in/emiliano-acerbi">
+    <Linkedin />
+    LinkedIn
+  </Link>
+  <Link target="about_blank" href="mailto:eacerbip@gmail.com">
+    <Gmail />
+    Gmail
+  </Link>
+  <Link target="about_blank" href="https://github.com/emiacerbi">
+    <Github />
+    Github
+  </Link>
+  <Link class="py-2 px-3" href="#">
+    <Arrow />
+  </Link>
+</div>

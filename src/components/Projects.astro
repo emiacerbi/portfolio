@@ -1,4 +1,6 @@
 ---
+import Underline from './Underline.astro';
+
 const projects = [
   {
     title: 'Loopstudios',
@@ -57,10 +59,10 @@ const projects = [
 ];
 ---
 
-<section class="pb-12 scroll-m-20" id="projects">
+<section class="scroll-m-20" id="projects">
   <h2 class="font-bold text-3xl relative w-fit">
     Projects
-    <div class="w-full absolute bg-accent h-1 -bottom-1"></div>
+    <Underline />
   </h2>
 
   <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
